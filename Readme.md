@@ -20,7 +20,7 @@ An interactive data analysis tool that combines the power of LLMs (using Groq) w
 - 📱 Responsive UI with Resizable Sidebar
 
 ## Architecture
-![Workflow Architecture](docs/images/workflow.png)
+![Workflow Architecture](Workflow(Architecture).png)
 
 The above diagram illustrates the data flow and component interaction in our Data Analysis Assistant.
 System Architecture
