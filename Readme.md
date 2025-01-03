@@ -12,6 +12,11 @@ An interactive data analysis tool that combines the power of LLMs (using Groq) w
 - 🔄 Real-time Data Processing
 - 📱 Responsive UI with Resizable Sidebar
 
+## Architecture
+![Workflow Architecture](docs/images/workflow.png)
+
+The above diagram illustrates the data flow and component interaction in our Data Analysis Assistant.
+
 ## Components
 
 ### Core Components
@@ -20,6 +25,7 @@ An interactive data analysis tool that combines the power of LLMs (using Groq) w
 2. **SQLAgent**: Handles SQL query generation and execution
 3. **DataFormatter**: Formats data for various visualization types
 4. **LLMManager**: Manages interactions with the Groq LLM
+5. **DatabaseManager**: Handles database connections and operations
 
 ### Visualization Types Supported
 
@@ -39,7 +45,7 @@ An interactive data analysis tool that combines the power of LLMs (using Groq) w
 
 1. Clone the repository:
 
-git clone [https://github.com/YogeshvarM/Data_Analysis_Assistant/tree/main](https://github.com/YogeshvarM/Data_Analysis_Assistant/tree/main)
+git clone https://github.com/yourusername/data-analysis-assistant.git
 cd data-analysis-assistant
 
 2. Create a virtual environment:
@@ -85,6 +91,7 @@ data-analysis-assistant/
 ├── app.py                    # Main Streamlit application
 ├── langgraph/
 │   ├── DataFormatter.py     # Data formatting for visualizations
+│   ├── DatabaseManager.py   # Database operations and management
 │   ├── LLMManager.py        # LLM interaction management
 │   ├── SQLAgent.py          # SQL query generation and execution
 │   ├── State.py            # State management
