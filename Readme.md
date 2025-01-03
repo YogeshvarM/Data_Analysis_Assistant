@@ -23,7 +23,90 @@ An interactive data analysis tool that combines the power of LLMs (using Groq) w
 ![Workflow Architecture](docs/images/workflow.png)
 
 The above diagram illustrates the data flow and component interaction in our Data Analysis Assistant.
+System Architecture
+The system is organized into three main layers:
+1. Configuration Layer
 
+Initial Setup: Handles user uploads and API configuration
+
+Validates Groq API key for LLM access
+Processes uploaded data files (CSV, Excel, JSON, Parquet)
+Creates SQLite database from uploaded data
+Generates comprehensive data analytics
+
+
+
+2. Streamlit Interface
+
+Dashboard View: Interactive data visualization interface
+
+Data Metrics: Statistical overview of the dataset
+Visualizations: Dynamic charts and graphs
+Chat Interface: Natural language interaction with data
+
+
+
+3. Core Processing (SQL Agent Workflow)
+The SQL Agent processes queries through a sequential workflow:
+
+parse_question
+
+Analyzes user's natural language input
+Identifies analytical intent
+
+
+get_unique_nouns
+
+Extracts key terms from question
+Identifies relevant database fields
+
+
+generate_sql
+
+Creates SQL query based on intent
+Structures query for database
+
+
+validate_and_fix_sql
+
+Validates SQL syntax
+Optimizes query structure
+Ensures safe execution
+
+
+execute_sql
+
+Runs query against SQLite database
+Splits into two possible paths:
+
+Path 1: format_results for text output
+Path 2: choose_visualization for visual output
+
+
+
+
+Response Generation
+
+Formats results into user-friendly response
+Integrates with chat interface
+Updates dashboard visualizations
+
+
+
+Data Flow
+CopyUser Input/Upload
+      ↓
+Configuration Layer (Initial Setup & Validation)
+      ↓
+Data Processing & Analytics
+      ↓
+Dashboard Generation
+      ↓
+User Query via Chat Interface
+      ↓
+SQL Agent Workflow Processing
+      ↓
+Response Generation & Display
 ## Components
 
 ### Core Components
