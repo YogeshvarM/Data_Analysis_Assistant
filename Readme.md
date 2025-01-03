@@ -39,7 +39,7 @@ An interactive data analysis tool that combines the power of LLMs (using Groq) w
 
 1. Clone the repository:
 
-git clone [https://github.com/yourusername/data-analysis-assistant.git](https://github.com/YogeshvarM/Data_Analysis_Assistant/tree/main)
+git clone [https://github.com/YogeshvarM/Data_Analysis_Assistant/tree/main](https://github.com/YogeshvarM/Data_Analysis_Assistant/tree/main)
 cd data-analysis-assistant
 
 2. Create a virtual environment:
