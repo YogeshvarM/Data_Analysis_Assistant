@@ -73,21 +73,6 @@ The SQL Agent processes queries through a sequential workflow:
 - Integrates with chat interface
 - Updates dashboard visualizations
 
-### Data Flow
-User Input/Upload
-↓
-Configuration Layer (Initial Setup & Validation)
-↓
-Data Processing & Analytics
-↓
-Dashboard Generation
-↓
-User Query via Chat Interface
-↓
-SQL Agent Workflow Processing
-↓
-Response Generation & Display
-
 ## Components
 
 ### Core Components
